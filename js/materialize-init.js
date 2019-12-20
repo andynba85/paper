@@ -16,7 +16,7 @@ $(document).ready(function () {
   // Init carousel slider
   $('.carousel.carousel-slider').carousel({
     fullWidth: true,
-    indicators: true
+    indicators: true,
   })
   // Int floating action button
   $('.fixed-action-btn').floatingActionButton({
@@ -30,5 +30,11 @@ $(document).ready(function () {
   // Init modal
   $('.modal').modal();
  // Init tabs
-  $('.tabs').tabs();
+  $('.tabs').tabs({
+      swipeable:true,
+  });
+ //init select
+  $('select').formSelect();
+
+  $('.dropdown-trigger').dropdown();
 });

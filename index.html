@@ -24,6 +24,7 @@
   <header id="home" class="navbar-fixed">
     <!--Banner Slider-->
     <div class="slider fullscreen">
+      <!--歡迎頁面-->
       <ul class="slides">
         <li>
           <img src="./img/cover/banner.jpg" alt="Background image of trip">
@@ -33,7 +34,7 @@
           </div>
         </li>
         <li>
-          <img src="./img/cover/banner2.jpg" alt="Background image of Mike">
+          <img src="./img/cover/banner2.jpg" alt="Background image of trip">
           <div class="caption center-align grey-text text-lighten-4">
             <h3>Love Adventure</h3>
             <h5>Embrace Challenges</h5>
@@ -41,101 +42,50 @@
         </li>
       </ul>
     </div>
-    
 
-    <!--檢查有無login--> 
-    <script type="text/javascript">
-      function loginalert(){         
-          if (auth.currentUser) {
-             window.location.href='second.html';
-          } else {
-             var toastHTML = '<span>Please login first</span><a class="btn-flat toast-action waves-effect" href="login.html">Login</a>';
-             M.toast({html: toastHTML,classes:'rounded'});
-          }
-      };
-    </script>
-
-    <!--Navbar-->
+    <!--最上面Navbar-->
     <nav class="transparent">
       <div class="container">
+        <!--最上面logo-->
         <a href="index.html" class="brand-logo">
           <img src="./img/logo/logo.png" alt="TripREC's logo" class="responsive-img">
         </a>
+        <!--最上面menu-->
         <a href="#" class="left sidenav-trigger show-on-medium-and-up" data-target="side-nav">
           <i class="material-icons">menu</i>
         </a>
       </div>
     </nav>
 
-
-    <!--Instruction Arrow-->
+    <!--Instruction Arrow 箭頭-->
     <a href="#" onclick="loginalert()" id="arrow" class="animated bounce infinite slow"></a>
   </header>
 
   <!--Side Nav-->
   <ul class=" left sidenav grey lighten-1" id="side-nav">
-    <li id="side-nav-logo">
-      <img src="./img/logo/logo.png" alt="TripREC's logo">
-    </li>
+    <li id="side-nav-logo"><img src="./img/logo/logo.png" alt="TripREC's logo"></li>
     <li><a class="sidenav-close grey-text text-darken-3 waves-effect" href="#home">Home</a></li>
     <li><a class="sidenav-close grey-text text-darken-3 waves-effect" href="#about">About</a></li>
-    <li><a class="sidenav-close grey-text text-darken-3 waves-effect" href="#skill">Let's trip</a></li>
-    <li><a class="sidenav-close grey-text text-darken-3 waves-effect" href="#project">Edit</a></li>
-    <li><a class="sidenav-close grey-text text-darken-3 waves-effect" href="#more-info">AR Interact</a></li>
-    <li><a class="sidenav-close grey-text text-darken-3 waves-effect" href="#contact">Chat</a></li>
-    <li><a href="login.html">Sign in</a></li>
-    <li>
-      <div class="divider"></div>
-    </li>
+    <li><a href="login.html">login in</a></li>
+    <li><div class="divider"></div></li>
     <li><a class="subheader">Learn More About Us</a></li>
 
-
-    <!-- SIGN UP MODAL -->
-    <div id="modal-signup" class="modal">
-      <div class="modal-content">
-        <h4>Sign up</h4><br/>
-        <form id="signup-form">
-          <div class="input-field">
-            <input type="email" id="signup-email" required />
-            <label for="signup-email">Email address</label>
-          </div>
-          <div class="input-field">
-            <input type="password" id="signup-password" required />
-            <label for="signup-password">Choose password</label>
-          </div>
-          <button class="btn yellow darken-2 z-depth-0">Sign up</button>
-        </form>
-      </div>
-    </div>
-
-    <!-- LOGIN MODAL -->
-    <div id="modal-login" class="modal">
-      <div class="modal-content">
-        <h4>Login</h4><br />
-        <form id="login-form">
-          <div class="input-field">
-            <input type="email" id="login-email" required />
-            <label for="login-email">Email address</label>
-          </div>
-          <div class="input-field">
-            <input type="password" id="login-password" required />
-            <label for="login-password">Your password</label>
-          </div>
-          <button class="btn yellow darken-2 z-depth-0">Login</button>
-        </form>
-      </div>
-    </div>
-
-
     <div id="side-nav-icons-container">
-      <h5><a href="#" class="grey-text text-darken-3" target="_blank"><i
-            class="fab fa-medium-m"></i></a>
+      <h5>
+        <a href="#" class="grey-text text-darken-3" target="_blank">
+          <i class="fab fa-medium-m"></i>
+        </a>
       </h5>
-      <h5><a href="#" class="grey-text text-darken-3" target="_blank"><i
-            class="fab fa-github"></i></a>
+      <h5>
+        <a href="#" class="grey-text text-darken-3" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
       </h5>
-      <h5><a href="#" class="grey-text text-darken-3" target="_blank"><i
-            class="fab fa-linkedin"></i></a></h5>
+      <h5>
+        <a href="#" class="grey-text text-darken-3" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </h5>
     </div>
   </ul>
 
@@ -147,31 +97,23 @@
   <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
   <!-- TODO: Add SDKs for Firebase products that you want to use
        https://firebase.google.com/docs/web/setup#available-libraries -->
-  <script>
-  // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyDMHSqUW_e7B8-iCsXqDWfXUWr2sqagYH8",
-        authDomain: "triprec-30e5f.firebaseapp.com",
-        databaseURL: "https://triprec-30e5f.firebaseio.com",
-        projectId: "triprec-30e5f",
-        storageBucket: "triprec-30e5f.appspot.com",
-        messagingSenderId: "953678545738",
-        appId: "1:953678545738:web:4253c956a3bff4aa3e37b3"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-
-      //make auth and firestore reference
-      const auth = firebase.auth();
-      const db = firebase.firestore();
-      
-      //update firestore settings
-      db.settings({timestampsInSnapshots:true});
+ 
+  <!--檢查有無login，如果有登入就到second.html，沒有登入到login.html--> 
+  <script type="text/javascript">
+    function loginalert(){         
+        if (auth.currentUser) {
+           window.location.href='second.html';
+        } else {
+           var toastHTML = '<span>Please login first</span><a class="btn-flat toast-action waves-effect" href="login.html">Login</a>';
+           M.toast({html: toastHTML,classes:'rounded'});
+        }
+    };
   </script>
 
   <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="./js/materialize.min.js"></script>
   <script type="text/javascript" src="./js/materialize-init.js"></script>
+
   <script type="text/javascript" src="./js/index.js"></script>
   <script type="text/javascript" src="./js/auth.js"></script>
 </body>

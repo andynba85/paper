@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amaranth&display=swap" rel="stylesheet">
+  <!--Include Animate CSS-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <!--Include Font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+  <!--Include Materialize CSS-->
+  <link type="text/css" rel="stylesheet" href="./css/materialize.min.css">
+  <link type="text/css" rel="stylesheet" href="./css/index.css">
+  
+  <title>TripREC | Your Best Planner</title>
+</head>
+
+<body id="body">
+
+    <!--Navbar-->
+    <nav class="grey lighten-2">
+      <div class="container grey lighten-1">
+        <a href="index.html" class="brand-logo">
+          <img src="./img/logo/logo.png" alt="TripREC's logo" class="responsive-img">
+        </a>
+        <a href="#" class="left sidenav-trigger show-on-medium-and-up" data-target="slide-out">
+          <i class="material-icons">account_box</i>
+        </a>
+        <!--modal trigger-->
+        <a href="#modal1" class="right show-on-medium-and-up modal-trigger">
+          <i class="material-icons">search</i>
+        </a>
+      </div>
+    </nav>
+    
+    <!-- Sidenav Structure -->
+    <ul id="slide-out" class="sidenav">
+      <li><div class="user-view">
+        <div class="background">
+          <img src="img/parallax/countryside.jpeg">
+        </div>
+        <a href="#user"><img class="circle" src="img/me.jpg"></a>
+        <a href="#name"><span class="white-text name">Andy Hsieh</span></a>
+        <a href="#email"><span class="white-text email">andy.nba85@gmail.com</span></a>
+      </div></li>
+      <li><a href="#!"><i class="material-icons">cloud</i>First Link </a></li>
+      <li><a href="#!">Second Link</a></li>
+      <li><div class="divider"></div></li>
+      <li><a class="subheader">Subheader</a></li>
+      <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>    
+    </ul>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+         <!--<div class="divider"></div>-->
+              
+            <div class="container">
+              <div class="row">
+                 <table class="highlight">
+                  <tbody>
+                    <tr onclick="showclick('台北市')">
+                      <td>台北市</td>
+                      <td></td>
+                      <td class="right"><i id="台北市" class="material-icons" style="display:none;">done</i></td>
+                    </tr>
+                    <tr onclick="showclick('新北市')">
+                      <td>新北市</td>
+                      <td></td>
+                      <td class="right"><i id="新北市" class="material-icons" style="display:none;">done</i></td>
+                    </tr>
+                    <tr onclick="showclick('基隆市')">
+                      <td>基隆市</td>
+                      <td></td>
+                      <td class="right"><i id="基隆市" class="material-icons" style="display:none;">done</i></td>
+                    </tr>
+                    <tr onclick="showclick('宜蘭縣')">
+                      <td>宜蘭縣</td>
+                      <td></td>
+                      <td class="right"><i id="宜蘭縣" class="material-icons" style="display:none;">done</i></td>
+                    </tr>
+                    <tr onclick="showclick('桃園市')">
+                      <td>桃園市</td>
+                      <td></td>
+                      <td class="right"><i id="桃園市" class="material-icons" style="display:none;">done</i></td>
+                    </tr>
+                    <tr onclick="showclick('新竹縣')">
+                      <td>新竹縣</td>
+                      <td></td>
+                      <td class="right"><i id="新竹縣" class="material-icons" style="display:none;">done</i></td>
+                    </tr>
+                    <tr onclick="showclick('新竹市')">
+                      <td>新竹市</td>
+                      <td></td>
+                      <td class="right"><i id="新竹市" class="material-icons" style="display:none;">done</i></td>
+                    </tr>
+                    <tr onclick="showclick('苗栗縣')">
+                      <td>苗栗縣</td>
+                      <td></td>
+                      <td class="right"><i id="苗栗縣" class="material-icons" style="display:none;">done</i></td>
+                    </tr>
+                    <tr onclick="showclick('台中市')">
+                      <td>台中市</td>
+                      <td></td>
+                      <td class="right"><i id="台中市" class="material-icons" style="display:none;">done</i></td>
+                    </tr>
+                    <tr onclick="showclick('彰化縣')">
+                      <td>彰化縣</td>
+                      <td></td>
+                      <td class="right"><i id="彰化縣" class="material-icons" style="display:none;">done</i></td>
+                    </tr>
+                    <tr onclick="showclick('南投縣')">
+                      <td>南投縣</td>
+                      <td></td>
+                      <td class="right"><i id="南投縣" class="material-icons" style="display:none;">done</i></td>
+                    </tr>
+                    <tr onclick="showclick('雲林縣')">
+                      <td>雲林縣</td>
+                      <td></td>
+                      <td class="right"><i id="雲林縣" class="material-icons" style="display:none;">done</i></td>
+                    </tr>
+                    <tr onclick="showclick('嘉義市')">
+                      <td>嘉義市</td>
+                      <td></td>
+                      <td class="right"><i id="嘉義市" class="material-icons" style="display:none;">done</i></td>
+                    </tr>
+                    <tr onclick="showclick('嘉義縣')">
+                      <td>嘉義縣</td>
+                      <td></td>
+                      <td class="right"><i id="嘉義縣" class="material-icons" style="display:none;">done</i></td>
+                    </tr>
+                    <tr onclick="showclick('台南縣')">
+                      <td>台南縣</td>
+                      <td></td>
+                      <td class="right"><i id="台南縣" class="material-icons" style="display:none;">done</i></td>
+                    </tr>
+                    <tr onclick="showclick('高雄市')">
+                      <td>高雄市</td>
+                      <td></td>
+                      <td class="right"><i id="高雄市" class="material-icons" style="display:none;">done</i></td>
+                    </tr>
+                    <tr onclick="showclick('屏東縣')">
+                      <td>屏東縣</td>
+                      <td></td>
+                      <td class="right"><i id="屏東縣" class="material-icons" style="display:none;">done</i></td>
+                    </tr>
+                    <tr onclick="showclick('花蓮縣')">
+                      <td>花蓮縣</td>
+                      <td></td>
+                      <td class="right"><i id="花蓮縣" class="material-icons" style="display:none;">done</i></td>
+                    </tr>
+                    <tr onclick="showclick('台東縣')">
+                      <td>台東縣</td>
+                      <td></td>
+                      <td class="right"><i id="台東縣" class="material-icons" style="display:none;">done</i></td>
+                    </tr>
+                    <tr onclick="showclick('澎湖縣')">
+                      <td>澎湖縣</td>
+                      <td></td>
+                      <td class="right"><i id="澎湖縣" class="material-icons" style="display:none;">done</i></td>
+                    </tr>
+                    <tr onclick="showclick('金門縣')">
+                      <td>金門縣</td>
+                      <td></td>
+                      <td class="right"><i id="金門縣" class="material-icons" style="display:none;">done</i></td>
+                    </tr>
+                    <tr onclick="showclick('連江縣')">
+                      <td>連江縣</td>
+                      <td></td>
+                      <td class="right"><i id="連江縣" class="material-icons" style="display:none;">done</i></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+      </div>
+      <div class="modal-footer col s6">
+         <a class="waves-effect waves-light light-blue darken-4 btn" onclick="QS_attraction()">Search</a>
+         <a class="waves-effect waves-light btn">Cancel</a>
+      </div>
+    </div>  
+
+<!--
+  <div id="test-swipe-1" class="col s12 blue">Test 1</div>
+  <div id="test-swipe-2" class="col s12 red">Test 2</div>
+  <div id="test-swipe-3" class="col s12 green">Test 3</div>
+-->
+
+  <section class="section grey lighten-5 section-about grey-text text-darken-2 scrollspy" id="QS_attraction_section_id">
+    <div class="container center">
+      <h3>Attraction</h3>
+      <h6 class="grey-text text-darken-1">
+        search result
+      </h6> 
+  
+      <div id="bslide" class="row">
+        <div class="col s12">
+          <ul id="slide" class="tabs row center">
+            <li id="slide1" class="tab col s12"><a id="s1" href="#swipe1">Popular</a></li>
+            <li id="slide2" class="tab col s12"><a id="s2" href="#swipe2">Cool</a></li>
+            <li id="slide3" class="tab col s12"><a id="s3" href="#swipe3">Comfortable</a></li>
+          </ul>
+        </div>
+      
+        <div id="swipe1" class="col s12 " style="overflow: auto"><img src="">1</div>
+        <div id="swipe2" class="col s12 " style="overflow: auto"><img src=""/>2</div>
+        <div id="swipe3" class="col s12 " style="overflow: auto"><img src="">3</div>
+      </div>
+     
+      <div id="qs_result" class="row center">
+          <div id="test"></div>   
+      </div>
+    </div>
+  </section>
+
+
+  <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+    <a class="btn-floating btn-large red pulse">
+      <i class="large material-icons">face</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating yellow" href="third.html"><i class="material-icons">directions_run</i></a></li>   
+      <li><a class="btn-floating blue darken-1" href="#"><i class="material-icons">edit</i></a></li>
+      <li><a class="btn-floating green" href="index.html"><i class="material-icons">phone_android</i></a></li>   
+      <li><a class="btn-floating red darken-1" href="#"><i class="material-icons">chat</i></a></li>
+       <li><a class="btn-floating grey darken-1" href="second.html"><i class="material-icons">home</i></a></li>
+    </ul>
+  </div>
+
+  <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="./js/materialize.min.js"></script>
+  <script type="text/javascript" src="./js/materialize-init.js"></script>
+  
+  <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-database.js"></script>
+
+
+
+  <script type="text/javascript" src="./js/second.js"></script>
+  <!--<script type="text/javascript" src="./js/auth.js"></script>-->
+  <script type="text/javascript" src="./js/QS_attraction.js"></script>
+</body>
+
+</html>

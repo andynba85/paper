@@ -4,6 +4,7 @@
 
 body {
   font-family: 'Amaranth', sans-serif;
+  overflow: auto;
 }
 
 .valign-wrapper {
@@ -162,6 +163,10 @@ ul.sidenav .subheader {
 
 #card-image3 {
   background-image: url("../img/about-me/about-me-3.jpg");
+}
+
+#card-image4 {
+  background-image: url("../img/about-me/about-me-4.jpg");
 }
 
 .section-about .card-image .overlay {
